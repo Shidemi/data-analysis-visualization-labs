@@ -4,6 +4,7 @@
 | --- | --- | --- | --- |
 | 1 | Настройка среды разработки и управление виртуальными окружениями | Anaconda Jupyter Notebook | Iris, Wine |
 | 2 | Разведочный анализ данных | Anaconda Jupyter Notebook | Auto MPG, Palmer Penguins |
+| 3 | Линейная регрессия | Anaconda Jupyter Notebook | Cars (R datasets), Advertising (ISL) |
 
 ## Лабораторная работа 1
 
@@ -51,4 +52,37 @@ jupyter notebook
 
 Откройте `lab2_anaconda.ipynb`, выберите **Python (lab1_terminal)** и выполните все ячейки. Блокнот загружает данные из локальных файлов и обновляет `figures/` и `outputs/`.
 
-[Условия курса](AGENTS.md). Следующие работы размещаются в папках `lab3/`, `lab4/` и далее.
+## Лабораторная работа 3
+
+- [Отчёт для защиты](lab3/report.docx) — титульный лист БГУ ФПМИ, код, фактический вывод Jupyter, графики, таблицы и демонстрация симулятора.
+- [Блокнот Anaconda](lab3/lab3_anaconda.ipynb) — парная регрессия Cars и три эксперимента Advertising с сохранёнными выводом и графиками.
+- [Исходные данные](lab3/data) — Cars ([документация R](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/cars.html), [CSV из Rdatasets](https://vincentarelbundock.github.io/Rdatasets/csv/datasets/cars.csv)) и Advertising ([данные авторов ISL](https://www.statlearning.com/resources-first-edition)).
+- [Графики](lab3/figures), [снимки экрана](lab3/screenshots) и [результаты](lab3/outputs) — метрики, коэффициенты Advertising, тестовые прогнозы и модель с тремя признаками.
+- [Приложение Streamlit](lab3/app.py) — прогноз продаж по трём рекламным бюджетам и интерактивный график.
+
+На Cars модель оценила прирост расстояния до остановки в **3,6857 фута** на 1 милю/ч. Тестовый R² составил **0,6158**. На Advertising вариант **TV + radio** показал лучшие тестовые метрики (MAE **1,4443**, MSE **3,1379**, R² **0,9006**) среди трёх комбинаций признаков на одних и тех же 40 тестовых строках.
+
+### Запуск блокнота Anaconda
+
+Используйте окружение `lab1_terminal` из первой работы. Из корня проекта выполните:
+
+```bash
+conda activate lab1_terminal
+cd lab3
+jupyter notebook
+```
+
+Откройте `lab3_anaconda.ipynb`, выберите ядро **Python (lab1_terminal)** и выполните все ячейки. Блокнот использует локальные CSV и обновляет `figures/` и `outputs/`.
+
+### Запуск симулятора
+
+В окружении с Python 3.11 выполните из корня репозитория:
+
+```bash
+python -m pip install -r lab3/requirements-app.txt
+python -m streamlit run lab3/app.py
+```
+
+Приложение загружает модель из `lab3/outputs/advertising_model.joblib`. Ползунки меняют бюджеты, а список над графиком выбирает канал, для которого показана линия прогноза.
+
+[Условия курса](AGENTS.md). Следующие работы размещаются в папках `lab4/` и далее.
