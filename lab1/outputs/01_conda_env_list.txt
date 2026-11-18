@@ -1,0 +1,9 @@
+
+# conda environments:
+#
+# * -> active
+# + -> frozen
+base                     /opt/anaconda3
+lab1_gui                 /opt/anaconda3/envs/lab1_gui
+lab1_terminal            /opt/anaconda3/envs/lab1_terminal
+                         /opt/miniconda3

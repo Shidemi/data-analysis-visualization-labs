@@ -1,0 +1,4 @@
+Available kernels:
+  lab1_gui         /Users/admin/Library/Jupyter/kernels/lab1_gui
+  lab1_terminal    /Users/admin/Library/Jupyter/kernels/lab1_terminal
+  python3          /opt/anaconda3/envs/lab1_terminal/share/jupyter/kernels/python3

@@ -1,0 +1,6 @@
+=== which python ===
+/opt/anaconda3/envs/lab1_terminal/bin/python
+Python 3.11.16
+
+=== CONDA_DEFAULT_ENV ===
+lab1_terminal

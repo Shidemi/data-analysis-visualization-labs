@@ -1,0 +1,13 @@
+=== Аппаратные ресурсы (macOS) ===
+Модель:        Mac15,13
+Процессор:     Apple M3
+Ядер физ.:     8
+Ядер лог.:     8
+ОЗУ:           16 GB
+Архитектура:   arm64
+ОС:            macOS 15.0 (build 24A335)
+GPU:           Chipset Model: Apple M3;Total Number of Cores: 10
+Диск (/):      460Gi всего, 157Gi свободно
+
+=== Проверка наличия CUDA GPU ===
+nvidia-smi не найден: CUDA-GPU отсутствует (Apple Silicon, ускорение через Metal/MPS)
